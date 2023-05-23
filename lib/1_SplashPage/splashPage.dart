@@ -1,5 +1,7 @@
 import 'package:app1_tinkle/2_LoginPage/loginPage.dart';
+import 'package:app1_tinkle/3_Home/home.dart';
 import 'package:easy_splash_screen/easy_splash_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +23,7 @@ class SplashPage extends StatelessWidget {
       durationInSeconds: 2,
       loaderColor: const Color.fromRGBO(107, 93, 82, 1),
       loadingTextPadding: const EdgeInsets.only(bottom: 150),
-      navigator: LoginPage(),
+      navigator: LoginPage()
     );
   }
 }

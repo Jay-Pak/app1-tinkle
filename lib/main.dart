@@ -1,4 +1,6 @@
+import 'package:app1_tinkle/1_SplashPage/splashPage.dart';
 import 'package:app1_tinkle/2_LoginPage/loginPage.dart';
+import 'package:app1_tinkle/5_MyinfoPage/myinfoPage.dart';
 import 'package:flutter/material.dart';
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart' as kakao;
 import 'firebase_options.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           fontFamily: 'SpoqaHanSansNeoRegular'
       ),
-      home: LoginPage(),
+      home: SplashPage(),
     );
   }
 }
