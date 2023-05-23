@@ -66,7 +66,7 @@ class _MyinfoPageState extends State<MyinfoPage> {
                         width: 228,
                         height: 50,
                         color: Colors.lightGreen,
-                        child: Text('PRO 멤버'),
+                        child: Text('PRO 멤버', style: TextStyle(color: Color(0xff2400FF)),),
                       )
                     ],
                   ),

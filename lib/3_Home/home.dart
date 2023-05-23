@@ -11,7 +11,17 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int selectIndex = 0;
-  List<int> list_color = [0xFFDFD3C3, 0xFFC7B199, 0xFF9F8473, 0xFF6C5D53, 0xFFE2D3CD, 0xFFE3DAD5, 0xFFE6CDB5, 0xFFF7D8B5, 0xFFD0C8B6];
+  List<int> list_color = [
+    0xFFDFD3C3,
+    0xFFC7B199,
+    0xFF9F8473,
+    0xFF6C5D53,
+    0xFFE2D3CD,
+    0xFFE3DAD5,
+    0xFFE6CDB5,
+    0xFFF7D8B5,
+    0xFFD0C8B6
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -76,8 +86,8 @@ class _HomeState extends State<Home> {
     );
   }
 
-  AppBar? getAppbar(){
-    if(selectIndex == 0){
+  AppBar? getAppbar() {
+    if (selectIndex == 0) {
       return AppBar(
         title: const Text(
           '일정',
@@ -85,7 +95,7 @@ class _HomeState extends State<Home> {
         ),
       );
     }
-    else if(selectIndex == 1){
+    else if (selectIndex == 1) {
       return AppBar(
         title: const Text(
           '캘린더',
@@ -93,7 +103,7 @@ class _HomeState extends State<Home> {
         ),
       );
     }
-    else if(selectIndex == 2){
+    else if (selectIndex == 2) {
       return AppBar(
         title: const Text(
           '보관함',
@@ -101,7 +111,7 @@ class _HomeState extends State<Home> {
         ),
       );
     }
-    else if(selectIndex == 3){
+    else if (selectIndex == 3) {
       return AppBar(
         title: const Text(
           '내 정보',
@@ -111,44 +121,30 @@ class _HomeState extends State<Home> {
     }
   }
 
-  Widget getPage(){
-    if(selectIndex == 0){
-      return Column(
-        children: [
-          const SizedBox(
-            height: 30,
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: const Text(
-              'TODAY',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          // ListView.builder(
-          //   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          //   itemCount: ,
-          //   itemBuilder: (BuildContext context, int index){
-          //     return Container(
-          //       child: ,
-          //     ),
-          //   },
-          // ),
-        ],
+  Widget? getPage() {
+    if (selectIndex == 0) {
+      return ListView.builder(
+        itemBuilder: (ctx, idx) {
+          if (idx == 0) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: const Text(
+                'TODAY',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+            );
+          }
+        }
       );
     }
-    else if(selectIndex == 1){
+    else if (selectIndex == 1) {
       return MyinfoPage();
     }
-    else if(selectIndex == 2){
+    else if (selectIndex == 2) {
       return MyinfoPage();
     }
-    else if(selectIndex == 3){
+    else if (selectIndex == 3) {
       return MyinfoPage();
     }
-    return Home();
   }
 }
