@@ -6,14 +6,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class MyinfoPage extends StatefulWidget {
-  const MyinfoPage({Key? key}) : super(key: key);
+class MyInfoPage extends StatefulWidget {
+  const MyInfoPage({Key? key}) : super(key: key);
 
   @override
-  State<MyinfoPage> createState() => _MyinfoPageState();
+  State<MyInfoPage> createState() => _MyInfoPageState();
 }
 
-class _MyinfoPageState extends State<MyinfoPage> {
+class _MyInfoPageState extends State<MyInfoPage> {
   KakaoServerToken viewModel = KakaoServerToken(KakaoLogin());
   final GoogleLogin _googleSignIn = GoogleLogin();
 

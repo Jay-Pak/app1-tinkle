@@ -1,4 +1,7 @@
+import 'package:app1_tinkle/4_CalendarPage/calendarPage.dart';
 import 'package:app1_tinkle/5_MyinfoPage/myinfoPage.dart';
+import 'package:app1_tinkle/6_Box/box.dart';
+import 'package:app1_tinkle/AddcallPage/addcallPage.dart';
 import 'package:app1_tinkle/data/call.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -100,7 +103,9 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromRGBO(100, 81, 63, 1),
         child: const Icon(MdiIcons.calendarPlus),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => AddCallPage()));
+        },
       ),
     );
   }
@@ -126,6 +131,24 @@ class _HomeState extends State<Home> {
           '보관함',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            splashRadius: 20,
+            icon: Icon(Icons.send),
+            color: Colors.black,
+            iconSize: 24,
+            constraints: BoxConstraints(maxWidth: 34),
+          ),
+          IconButton(
+            onPressed: () {},
+            splashRadius: 20,
+            icon: Icon(Icons.search),
+            color: Colors.black,
+            iconSize: 24,
+            constraints: BoxConstraints(maxWidth: 44),
+          )
+        ],
       );
     } else if (selectIndex == 3) {
       return AppBar(
@@ -321,11 +344,11 @@ class _HomeState extends State<Home> {
         },
       );
     } else if (selectIndex == 1) {
-      return MyinfoPage();
+      return CalendarPage();
     } else if (selectIndex == 2) {
-      return MyinfoPage();
+      return Box();
     } else if (selectIndex == 3) {
-      return MyinfoPage();
+      return MyInfoPage();
     }
   }
 }
