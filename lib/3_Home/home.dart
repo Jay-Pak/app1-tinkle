@@ -1,7 +1,7 @@
 import 'package:app1_tinkle/4_CalendarPage/calendarPage.dart';
 import 'package:app1_tinkle/5_MyinfoPage/myinfoPage.dart';
 import 'package:app1_tinkle/6_Box/box.dart';
-import 'package:app1_tinkle/AddcallPage/addcallPage.dart';
+import 'package:app1_tinkle/7_AddcallPage/addcallPage.dart';
 import 'package:app1_tinkle/data/call.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
